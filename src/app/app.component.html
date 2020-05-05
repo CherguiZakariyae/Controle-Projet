@@ -6,7 +6,6 @@
           <label for="exampleInputEmail1">Noms</label>
           <input
             type="text"
-            [(ngModel)]="contact.lastname"
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
@@ -16,7 +15,6 @@
           <label for="exampleInputPassword1">Prénoms</label>
           <input
             type="text"
-            [(ngModel)]="contact.firstname"
             class="form-control"
             id="exampleInputPassword1"
           />
@@ -25,7 +23,6 @@
           <label for="exampleInputPassword1">Téléphone</label>
           <input
             type="tel"
-            [(ngModel)]="contact.phoneNumber"
             class="form-control"
             id="exampleInputPassword1"
           />
@@ -34,7 +31,6 @@
           <label for="exampleInputPassword1">E-mail</label>
           <input
             type="email"
-            [(ngModel)]="contact.email"
             class="form-control"
             id="exampleInputPassword1"
           />
@@ -54,17 +50,10 @@
       </h1>
 
       <ul>
-        <ol *ngFor="let item of contacts; let id = index">
-          {{
-            id + 1
-          }}
+        <ol >
+          
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          {{
-            item.lastname
-          }}
-          {{
-            item.firstname
-          }}
+         
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <i class="fa fa-edit" (click)="onEdit(item)"></i>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
